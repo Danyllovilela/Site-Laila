@@ -2,16 +2,7 @@
 
 header {
     background-color: #a100ff;
-
-    text-align: left;
-    min-height: 50px;
-}  
-
-nav {
-    background-color: #a100ff;
-    padding: 10px;
-
-    text-align: right;
+    text-align: center;
 }
 
 nav > a {
