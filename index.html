@@ -10,22 +10,18 @@
             --cinza: #131111;
             --roxo: #ae00ff;
         }
-
         *{
             margin: 0;
             padding: 0;
         }
-
         body{
             font-family: Arial, Helvetica, sans-serif;
             background-color: var(--Cinza);
             color: var(--branco);
         }
-
         .img_logo_header{
             width: 150px;
         }
-
         header{
             display: flex;
             flex-direction: row;
@@ -36,17 +32,19 @@
             justify-content: space-between;
             padding: 0 10%;
         }
-
-        nav{
+        .navegation_header{
+            display: flex;
             gap: 3em;
         }
-
-        nav a{
+        .navegation_header a{
             text-decoration: none;
-            color: var(--roxo);
+            color: rgb(98, 0, 255);
+            font-weight: bold;
             transition: 1s;
         }
-
+        .navegation_header a:hover{
+            color: blue;
+        }
         .btn_icon_header{
             background-color: transparent;
             border: none;
@@ -54,7 +52,6 @@
             cursor: pointer;
             display: none;
         }
-
         @media screen and (max-widht: 768px){
             .btn_icon_header{
                 display: block;
