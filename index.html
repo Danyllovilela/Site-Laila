@@ -63,13 +63,23 @@
                 position: absolute;
                 flex-direction: column;
                 top: 0;
+                background-color: #000000;
+                height: 100%;
+                width: 35vw;
+                padding: 16px;
+                animation-duration: 1s;
+                margin-left: -100vw;
             }            
+        }
+        @keyframes ShowSideBar{
+            from {margin-left: -100vw;}
+            top {margin-left: -10vw;}
         }
     </style>
 </head>
 <body>
     <header class="header" id="header">
-        <button class="btn_icon_header">
+        <button onclick="ToggleSideBar()" class="btn_icon_header">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
@@ -91,4 +101,23 @@
         </nav>
     </header>
 </body>
+<script>
+    var header = document.getElementById('header');
+    var navegation_header = document.querySelector('.navegation_header');
+    var content = document.getElementById('content')
+    var ShowSideBar = false;
+
+    function ToggleSideBar()
+    {
+        ShowSideBar = !ShowSideBar;
+        if(ShowSideBar)
+        {
+            navegation_header.style.marginLeft = '-10vw';
+        }
+        else
+        {
+            navegation_header.style.marginLeft = '-100vw';
+        }
+    }
+</script>
 </html>
